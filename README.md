@@ -1,2 +1,2 @@
-# raszventory
-Inventory Management System -- Using C# (WPF, WebAPI, SQL)
+# Raszventory
+Basic Inventory Management System -- Using C# (WPF, SQL, CRUD)

@@ -1,12 +1,17 @@
-﻿<Window x:Class="raszventory.MainWindow"
+﻿<Window x:Name="frmMain" x:Class="raszventory.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:raszventory"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Raszventory Management" Height="450" Width="514" Icon="/favicon.ico">
     <Grid>
+        <TextBox x:Name="tbSearchDisplay" HorizontalAlignment="Left" Margin="110,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Height="41" FontSize="24"/>
+        <Label x:Name="lblItemName" Content="ITEM" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <DataGrid x:Name="dgDisplay" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,69,10,31"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="362,16,0,0" VerticalAlignment="Top" Height="30" Width="52"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="432,16,0,0" VerticalAlignment="Top" Height="30" Width="52"/>
 
     </Grid>
 </Window>

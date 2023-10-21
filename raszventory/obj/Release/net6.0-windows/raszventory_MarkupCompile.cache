@@ -1,18 +1,18 @@
 ﻿raszventory
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\
+C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Release\net6.0-windows\
 raszventory
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\Rasz\source\repos\raszventory\raszventory\App.xaml
 11407045341
 
-61068855775
+4255836355
 194-1976662911
 MainWindow.xaml;
 
