@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using raszventory.Model;
+using raszventory.Utility;
 
 namespace raszventory
 {
@@ -24,6 +25,16 @@ namespace raszventory
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void tbSearchDisplay_GotFocus(object sender, RoutedEventArgs e)
+        {
+            string defaultSearchVal = "Search item (ex. type / name)";
+            if (tbSearchDisplay.Text == defaultSearchVal)
+            {
+                tbSearchDisplay.Text = "";
+                tbSearchDisplay.Foreground = Brushes.Black;
+            }
         }
     }
 }

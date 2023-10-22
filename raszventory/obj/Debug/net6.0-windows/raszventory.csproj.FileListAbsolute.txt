@@ -19,3 +19,4 @@ C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\refi
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory.pdb
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory.genruntimeconfig.cache
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\ref\raszventory.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
