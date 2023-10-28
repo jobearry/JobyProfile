@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using raszventory.Model;
-using raszventory.Utility;
 
 namespace raszventory
 {
@@ -27,7 +27,7 @@ namespace raszventory
             InitializeComponent();
         }
 
-        private void tbSearchDisplay_GotFocus(object sender, RoutedEventArgs e)
+        private void SearchDisplayOnFocus(object sender, RoutedEventArgs e)
         {
             string defaultSearchVal = "Search item (ex. type / name)";
             if (tbSearchDisplay.Text == defaultSearchVal)
@@ -36,5 +36,20 @@ namespace raszventory
                 tbSearchDisplay.Foreground = Brushes.Black;
             }
         }
+
+        private void SearchOnClick(object sender, RoutedEventArgs e)
+        {
+            SQLService sqlService = new SQLService();
+            DataSet dSet = sqlService.get(tbSearchDisplay.Text);
+            DataTable TableDisplay = new DataTable();
+            TableDisplay = dSet.Tables["RZINVT01"]!;
+            dgDisplay.SetBinding(ItemsControl.ItemsSourceProperty,
+                new Binding
+                {
+                    Source = dSet.Tables["RZINVT01"],
+                    UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
+                });
+        }
+
     }
 }

@@ -3,7 +3,6 @@ C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\rasz
 C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\raszventory.runtimeconfig.json
 C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\raszventory.dll
 C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\raszventory.pdb
-C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory.csproj.AssemblyReference.cache
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory_MarkupCompile.cache
@@ -20,3 +19,11 @@ C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\rasz
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory.genruntimeconfig.cache
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\ref\raszventory.dll
 C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory.csproj.AssemblyReference.cache
+C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rasz\source\repos\raszventory\raszventory\obj\Debug\net6.0-windows\raszventory.csproj.CopyComplete

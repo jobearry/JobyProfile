@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="Raszventory Management" Height="450" Width="514" Icon="/favicon.ico" WindowStartupLocation="CenterScreen">
     <Grid Background="White">
-        <TextBox x:Name="tbSearchDisplay" Margin="11,15,167,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" FontSize="24" Text="Search item (ex. type / name)" Foreground="#FF8E8E8E" GotFocus="tbSearchDisplay_GotFocus"/>
-        <Button x:Name="btnSearch" Content="Search" Margin="0,15,89,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Right" Width="73"/>
+        <TextBox x:Name="tbSearchDisplay" Margin="11,15,167,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" FontSize="24" Text="Search item (ex. type / name)" Foreground="#FF8E8E8E" GotFocus="SearchDisplayOnFocus"/>
+        <Button x:Name="btnSearch" Content="Search" Margin="0,15,89,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Right" Width="73" Click="SearchOnClick"/>
         <Button x:Name="btnSave" Content="Save" Margin="0,15,11,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Right" Width="73"/>
-        <DataGrid Name="dgDisplay" DataContext="{Binding RelativeSource={RelativeSource Self}}" ItemsSource="{Binding DataDisplay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:MainWindow}}}"
+        <DataGrid Name="dgDisplay" 
                   AutoGenerateColumns="False" Margin="11,61,11,19"
                   CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" SelectionUnit="Cell" EnableRowVirtualization="False" >
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ItemType" Binding="{Binding Path=Binding, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
-                <DataGridTextColumn Header="ItemName" Binding="{Binding Path=Binding, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
+                <DataGridTextColumn Header="ItemType" Binding="{Binding Path=item_type, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
+                <DataGridTextColumn Header="ItemName" Binding="{Binding Path=item_name, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
 
-                <DataGridTextColumn Header="ItemCode" Binding="{Binding Path=Binding, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
-                <DataGridTextColumn Header="ModelNumber" Binding="{Binding Path=Binding, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
+                <DataGridTextColumn Header="ItemCode" Binding="{Binding Path=item_code, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
+                <DataGridTextColumn Header="ModelNumber" Binding="{Binding Path=model_no, UpdateSourceTrigger=PropertyChanged}" Width="*" CanUserSort="False"/>
 
             </DataGrid.Columns>
 
