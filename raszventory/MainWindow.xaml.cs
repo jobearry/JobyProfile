@@ -26,6 +26,7 @@ namespace raszventory
         {
             InitializeComponent();
         }
+        public List<InventoryModel> InventoryData = new List<InventoryModel>();
 
         private void SearchDisplayOnFocus(object sender, RoutedEventArgs e)
         {
@@ -40,16 +41,46 @@ namespace raszventory
         private void SearchOnClick(object sender, RoutedEventArgs e)
         {
             SQLService sqlService = new SQLService();
-            DataSet dSet = sqlService.get(tbSearchDisplay.Text);
+            DataSet dSet = sqlService.Get(tbSearchDisplay.Text);
+            InitializeDisplay(dSet);
+        }
+
+        private void SaveOnClick(object sender, RoutedEventArgs e)
+        {
+            SQLService sqlService = new SQLService();
+            AddDataToList();
+            DataSet dSet = sqlService.Put(InventoryData,tbSearchDisplay.Text);
+            InventoryData.Clear();
+            InitializeDisplay(dSet);
+        }
+
+        public void InitializeDisplay(DataSet data)
+        {
             DataTable TableDisplay = new DataTable();
-            TableDisplay = dSet.Tables["RZINVT01"]!;
+            TableDisplay = data.Tables["RZINVT01"]!;
             dgDisplay.SetBinding(ItemsControl.ItemsSourceProperty,
                 new Binding
                 {
-                    Source = dSet.Tables["RZINVT01"],
+                    Source = data.Tables["RZINVT01"],
                     UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
                 });
+
         }
 
+        public void AddDataToList()
+        {
+            foreach (DataRowView item in dgDisplay.Items)
+            {
+                InventoryModel itemContent = new InventoryModel()
+                {
+                    id = (int)item["id"],
+                    item_type = $"{item["item_type"]}".Trim(),
+                    item_name = $"{item["item_name"]}".Trim(),
+                    item_code = $"{item["item_code"]}".Trim(),
+                    model_no = $"{item["model_no"]}".Trim()
+                };
+                InventoryData.Add(itemContent);
+            }
+        }
     }
 }

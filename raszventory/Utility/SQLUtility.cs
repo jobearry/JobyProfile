@@ -11,6 +11,7 @@ namespace raszventory
     class SQLUtility
     {
         public static string ConnectionString = "Server=localhost;Database=RASZ;Trusted_Connection=true";
+        public static string TableName = "RZINVT01";
 
         public static SqlConnection DBConnect()
         {

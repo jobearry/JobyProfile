@@ -9,7 +9,7 @@
     <Grid Background="White">
         <TextBox x:Name="tbSearchDisplay" Margin="11,15,167,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" FontSize="24" Text="Search item (ex. type / name)" Foreground="#FF8E8E8E" GotFocus="SearchDisplayOnFocus"/>
         <Button x:Name="btnSearch" Content="Search" Margin="0,15,89,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Right" Width="73" Click="SearchOnClick"/>
-        <Button x:Name="btnSave" Content="Save" Margin="0,15,11,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Right" Width="73"/>
+        <Button x:Name="btnSave" Content="Save" Margin="0,15,11,0" VerticalAlignment="Top" Height="41" HorizontalAlignment="Right" Width="73" Click="SaveOnClick"/>
         <DataGrid Name="dgDisplay" 
                   AutoGenerateColumns="False" Margin="11,61,11,19"
                   CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" SelectionUnit="Cell" EnableRowVirtualization="False" >
