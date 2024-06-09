@@ -1,5 +1,5 @@
 ﻿
-using raszventory.Model;
+using JobyProfiles.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace raszventory
+namespace JobyProfiles
 {
     class SQLService
     {
@@ -25,20 +25,20 @@ namespace raszventory
             return dSet;
         }
 
-        public DataSet Put(List<InventoryModel> listContent, string searchString) 
+        public DataSet Put(List<UserModel> listContent, string searchString) 
         {
             SqlConnection Connection = SQLUtility.DBConnect();
-            foreach (InventoryModel content in listContent)
+            foreach (UserModel content in listContent)
             {
-                SqlCommand cmd = new SqlCommand($"UPDATE {SQLUtility.TableName} " +
-                    $"SET item_type = '{content.item_type}', " +
-                    $"item_name = '{content.item_name}'," +
-                    $"item_code = '{content.item_code}'," +
-                    $"model_no = '{content.model_no}'" +
-                    $"WHERE item_type = '{content.item_type}'" +
-                    $"AND id = '{content.id}'", Connection);
+                //SqlCommand cmd = new SqlCommand($"UPDATE {SQLUtility.TableName} " +
+                //    $"SET item_type = '{content.item_type}', " +
+                //    $"item_name = '{content.item_name}'," +
+                //    $"item_code = '{content.item_code}'," +
+                //    $"model_no = '{content.model_no}'" +
+                //    $"WHERE item_type = '{content.item_type}'" +
+                //    $"AND id = '{content.id}'", Connection);
                 Connection.Open();
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 Connection.Close();
             }
             
