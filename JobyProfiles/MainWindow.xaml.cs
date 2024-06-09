@@ -27,6 +27,7 @@ namespace JobyProfiles
 
         private void SearchDisplayOnFocus(object sender, RoutedEventArgs e)
         {
+            //test
             //string defaultSearchVal = "Search item (ex. type / name)";
             //if (tbSearchDisplay.Text == defaultSearchVal)
             //{
